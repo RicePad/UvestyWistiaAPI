@@ -10,14 +10,14 @@
      <% @videos.each do |video| %>
        <li>
           <div class="collapsible-header">
-            <i class="mdi-av-my-library-books"></i>
+            <i class="material-icons">add</i>
             <%= link_to video.title, video %>
             <span class="right">
               <%= link_to edit_video_path(video) do %>
-                <i class="mdi-content-create"></i>
+               <i class="material-icons">input</i>
               <%end%>
-              <% link_to video, method: :delete, data: {confirm: 'Are you sure?'} do %>
-                <i class="mdi-notification-event-busy"></i>
+              <%= link_to video, method: :delete, data: {confirm: 'Are you sure?'} do %>
+                <i class="material-icons">delete</i>
               <%end%>
               </span>
             </div>
